@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+      
+        ul{
+            list-style: none;
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            /*border: 1px solid #000;*/
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(30deg);
+            animation: play 3s linear infinite;
+        }
+        li{
+            width: 300px;
+            height: 200px;
+            position: absolute;
+        }
+        li:nth-child(1){
+            background-color: red;
+            transform: translateY(100px) rotateX(90deg);
+        }
+        li:nth-child(2){
+            background-color: gold;
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        li:nth-child(3){
+            width: 200px;
+            background-color: skyblue;
+            transform: translateX(-100px) rotateX(90deg) rotateY(90deg);
+        }
+        li:nth-child(4){
+            width: 200px;
+            background-color: blue;
+            transform: translateX(200px) rotateX(-90deg) rotateY(90deg);
+            
+        }
+        li:nth-child(5){
+            background-color: green;
+            transform: translateZ(100px);
+        }
+        li:nth-child(6){
+            background-color: pink;
+            transform: translateZ(-100px);
+        }
+
+        @keyframes play{
+            0%{
+                transform: rotateX(30deg) rotateY(30deg);
+            }
+            20%{
+                transform: rotateX(-30deg) rotateY(200deg);
+            }
+            40%{
+                transform: rotateX(-30deg) rotateY(-30deg);
+            }
+            60%{
+                transform: rotateX(-270deg) rotateZ(-30deg);
+            }
+            80%{
+                transform: rotateZ(-150deg) rotateY(-30deg);
+            }
+            100%{
+                transform: rotateX(30deg) rotateY(30deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
